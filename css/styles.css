@@ -1,0 +1,19 @@
+/* Estilo general de la scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra */
+    height: 12px; /* Altura para barras de desplazamiento horizontal */
+  }
+  
+  /* Estilo del riel (fondo de la barra) */
+  ::-webkit-scrollbar-track {
+    background: #000000; /* Color del fondo */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  /* Estilo del pulgar (la parte desplazable de la barra) */
+  ::-webkit-scrollbar-thumb {
+    background: #ffcc00; /* Color del pulgar */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  
