@@ -19,8 +19,8 @@
         <!-- Menú principal -->
         <nav class="hidden md:flex items-center  lg:text-2xl font-bold">
             <a href="../index.html" class="mx-3 hover:text-yellow-400">Capital Vueling</a>
-            <a href="#" class="mx-3 hover:text-yellow-400">Consulta el tiempo</a>
-            <a href="#" class="mx-3 hover:text-yellow-400">Historial</a>
+            <a href="#" class="mx-3 text-yellow-400">Consulta el tiempo</a>
+            <a href="./historial.html" class="mx-3 hover:text-yellow-400">Historial</a>
             <a href="#" class="mx-4 hover:text-yellow-400">Log in <i class="fa-solid fa-user"></i></a>
             <!-- icono de git-hub -->
             <a href="#" class="mx-3 hover:text-yellow-400"><i class="fa-brands fa-square-github text-4xl"></i></a>
@@ -34,14 +34,15 @@
     <!-- Menú móvil -->
     <nav id="mobilemenu" class="hidden w-full text-right">
         <a href="../index.html" class="block hover:text-yellow-400">Capital Vueling</a>
-        <a href="#" class="block hover:text-yellow-400">Consulta el tiempo</a>
-        <a href="#" class="block hover:text-yellow-400">Historial</a>
+        <a href="#" class="block text-yellow-400">Consulta el tiempo</a>
+        <a href="./historial.html" class="block hover:text-yellow-400">Historial</a>
         <a href="#" class="block hover:text-yellow-400">Log in <i class="fa-solid fa-user"></i></a>
         <!-- icono de git-hub -->
         <a href="#" class="block hover:text-yellow-400"><i class="fa-brands fa-square-github"></i></a>
     </nav>
 </header>
-<main class="bg-black w-full">
+<main class="bg-black w-full text-center">
+    <h1 class="text-6xl text-white py-12 font-semibold">Consulta el <span class="text-yellow-400">tiempo</span> de tu futuro destino</h1>
     <section class=" bg-black flex gap-12 flex-wrap py-8 items-start justify-center">
         <select name="" id="select_capitales" class="w-[250px] md:w-[300px] lg:w-[400px] h-16">
             <option value="">Capitales del mundo</option>
@@ -53,7 +54,7 @@
     <section class="bg-black py-8 text-white text-center flex flex-wrap gap-12 items-center justify-center">
         <!-- Aqui es donde pondremos la informacion que nos devuelve la peticion -->
          <article class="flex flex-col gap-4">
-            <h1 id="sitio" class="text-4xl font-semibold"></h1>
+            <h2 id="sitio" class="text-4xl font-semibold"></h2>
             <p class="text-2xl">Estado: <span id="estado"></span></p>
             <p class="text-2xl">Temperatura: <span id="temperatura"></span></p>
          </article>
