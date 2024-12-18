@@ -1,13 +1,16 @@
 // API PÚBLICA
-
-let url_capitales = "https://api.sampleapis.com/countries/countries";
-
+let estado = document.getElementById("estado")
+let temperatura = document.getElementById("temperatura")
+let img = document.getElementById("img")
+let sitio = document.getElementById("sitio")
 let select_capitales = document.getElementById("select_capitales");
 let btn_consultar = document.getElementById("btn_consultar")
 
 let fragment = document.createDocumentFragment();
 
 const peticionApi =  () => {
+    let url_capitales = "https://api.sampleapis.com/countries/countries";
+
     fetch(url_capitales)
     .then((response) => response.json())
     .then((responsejson) => {
@@ -45,7 +48,11 @@ const peticionApiTiempo = () =>{
         fetch(url)
         .then((response) => response.json())
         .then((responsejson) => {
-
+            console.log(responsejson.current)
+            sitio.textContent = place.toUpperCase();
+            estado.textContent = responsejson.current.summary;
+            temperatura.textContent = responsejson.current.temperature + " ºC";
+            img.src = "../assets/img/weather_icons/"+responsejson.current.icon_num+".png";
         })
 
     }
