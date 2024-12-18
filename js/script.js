@@ -171,6 +171,7 @@ const guardarLocalStorage = (object) =>{
     console.log(aux)
     // subir el array actualizado al localStorage
     localStorage.setItem("billetes",JSON.stringify(aux));
+
 }
 
 
