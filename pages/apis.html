@@ -4,8 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta el tiempo</title>
+    <!-- link cdn de tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link de fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
+    <header
+    class="bg-black text-white flex flex-col items-center justify-center px-4 py-2 w-full  border-b border-gray-700">
+    <div class="flex justify-between  w-11/12">
+        <!-- logo -->
+        <img src="../assets/img/logo.webp" alt="logo de Capital Vueling" class="w-[70px] sm:w-[90px] lg:w-[120px]">
+        <!-- Menú principal -->
+        <nav class="hidden md:flex items-center  lg:text-2xl font-bold">
+            <a href="../index.html" class="mx-3 hover:text-yellow-400">Capital Vueling</a>
+            <a href="#" class="mx-3 hover:text-yellow-400">Consulta el tiempo</a>
+            <a href="#" class="mx-3 hover:text-yellow-400">Historial</a>
+            <a href="#" class="mx-4 hover:text-yellow-400">Log in <i class="fa-solid fa-user"></i></a>
+            <!-- icono de git-hub -->
+            <a href="#" class="mx-3 hover:text-yellow-400"><i class="fa-brands fa-square-github text-4xl"></i></a>
+        </nav>
+        <button id="menubtn" class=" flex md:hidden "><svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+    <!-- Menú móvil -->
+    <nav id="mobilemenu" class="hidden w-full text-right">
+        <a href="../index.html" class="block hover:text-yellow-400">Capital Vueling</a>
+        <a href="#" class="block hover:text-yellow-400">Consulta el tiempo</a>
+        <a href="#" class="block hover:text-yellow-400">Historial</a>
+        <a href="#" class="block hover:text-yellow-400">Log in <i class="fa-solid fa-user"></i></a>
+        <!-- icono de git-hub -->
+        <a href="#" class="block hover:text-yellow-400"><i class="fa-brands fa-square-github"></i></a>
+    </nav>
+</header>
+<main class="bg-black w-full">
+    <section class=" bg-black flex gap-12 flex-wrap py-8 items-start justify-center">
+        <select name="" id="select_capitales" class="w-[250px] md:w-[300px] lg:w-[400px] h-16">
+            <option value="">Capitales del mundo</option>
+        </select>
+        <button class="w-[250px] bg-yellow-400 text-black py-2 px-4 rounded-lg hover:bg-yellow-500 mb-4 h-16" id="btn_consultar">
+            ¿Que tiempo hace allí?
+        </button>
+    </section>
+</main>
+     <footer class="w-full bg-black py-8 text-white border-t border-gray-700">
+        <!-- Contenedor del footer -->
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+            <!-- Conócenos -->
+            <div>
+                <h3 class="font-bold mb-4 uppercase">Conócenos</h3>
+                <ul class="text-left">
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">¿Quiénes somos?</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Sala de prensa</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Ciudades</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Países</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Black Friday</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Vueling Global</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Sostenibilidad</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+
+            <!-- Te ayudamos -->
+            <div>
+                <h3 class="font-bold mb-4 uppercase">Te ayudamos</h3>
+                <ul class="text-left">
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Centro de ayuda</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Dudas e info</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Tarifas de los servicios</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Por qué reservar en Vueling.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Profesionales -->
+            <div>
+                <h3 class="font-bold mb-4 uppercase">Para Profesionales</h3>
+                <ul class="text-left">
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Agencias</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Grupos</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Empresas</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-yellow-400">Partners</a></li>
+                </ul>
+            </div>
+
+            <!-- news letter -->
+            <div class="text-center md:text-left">
+                <h3 class="font-bold mb-4 uppercase">¿Quieres recibir más ofertas?</h3>
+                <button class="w-full bg-yellow-400 text-black py-2 px-4 rounded-lg hover:bg-yellow-500 mb-4" >
+                    ¡Apúntate!
+                </button>
+                <!-- Redes Sociales -->
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-2xl hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <!-- Store -->
+                <div class="mt-6 flex justify-center md:justify-start space-x-2">
+                    <a href="#">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/store.png" alt="Store">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer inferior -->
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-xs">
+            <p>&copy; 2025 Capital Vueling | <a href="#" class="hover:text-yellow-400">Condiciones de uso</a> | <a
+                    href="#" class="hover:text-yellow-400">Política de cookies</a> | <a href="#"
+                    class="hover:text-yellow-400">Política de privacidad</a></p>
+        </div>
+    </footer>
 </body>
+<script src="../js/apis.js"></script>
 </html>
